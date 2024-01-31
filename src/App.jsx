@@ -1,9 +1,13 @@
 import React from 'react'
-import Header from 'Header.jsx';
+import Navbar from './components/Navbar/Navbar.jsx';
+import Header from './components/Header/Header.jsx';
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Navbar />
+      <Header />
+    </div>
   )
 }
 
