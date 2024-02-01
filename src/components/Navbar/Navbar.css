@@ -1,0 +1,39 @@
+.app__navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgb(204, 188, 100);
+}
+
+.app__navbar-logo {
+    margin: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 40px;
+}
+
+.app__navbar-title {
+    max-width: 250px;
+}
+
+.app__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.app__navbar-links li {
+    margin: 0 1rem;
+}
+
+.app__navbar-links:hover {
+    cursor: pointer;
+}
+
+.app__navbar-dropdown {
+    margin: 1rem;
+    cursor: pointer;
+}
