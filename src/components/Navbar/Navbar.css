@@ -1,9 +1,15 @@
 .app__navbar {
+    top: auto;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     border-bottom: 2px solid rgb(204, 188, 100);
+}
+
+#logo-title {
+    display: flex;
+    align-items: center;
 }
 
 .app__navbar-logo {
@@ -18,22 +24,110 @@
 }
 
 .app__navbar-links {
-    flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
     list-style: none;
+    cursor: pointer;
 }
 
 .app__navbar-links li {
     margin: 0 1rem;
 }
 
-.app__navbar-links:hover {
-    cursor: pointer;
+.app__navbar-links li:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(204, 188, 100);
 }
 
 .app__navbar-dropdown {
     margin: 1rem;
     cursor: pointer;
+    position: fixed;
+    top: 65px;
+    right: -6px;
+    font-size: 120%;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 2px solid rgb(204, 188, 100);
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.app__navbar-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transition: .5s; */
+    z-index: 5;
+}
+
+.app__navbar-overlay li {
+    list-style: none;
+    margin: 2.5rem;
+    color: rgb(204, 188, 100);
+    font-size: 1.5rem;
+    cursor: pointer;
+
+}
+
+.app__navbar-overlay li:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(204, 188, 100);
+}
+
+.app__navbar-overlay .overlay__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: rgb(204, 188, 100);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 2000px) {
+    .app__navbar-dropdown {
+        /* display: none; */
+    }
+
+    .app__navbar-links {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .app__navbar-dropdown {
+        display: none;
+    }
+
+    .app__navbar-links {
+        font-size: 1.1rem;
+    }
+
+    .app__navbar-logo {
+        max-width: 10%;
+    }
+
+    .app__navbar-title {
+        max-width: 75%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__navbar {
+        padding: 1rem
+    }
+
+    .app__navbar-links {
+        display: none;
+    }
+
+    .app__navbar-dropdown {
+        display: block;
+    }
+
 }

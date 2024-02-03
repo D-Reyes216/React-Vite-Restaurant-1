@@ -1,0 +1,32 @@
+.app__menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.app__menu-categories {
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid rgb(204, 188, 100);
+    padding: 1rem;
+}
+
+.app__menu-categories li{
+    list-style: none;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.app__menu-categories li:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(204, 188, 100);
+}
+
+.app__menu-list {
+    border-top: 2px solid rgb(204, 188, 100);
+}
+
+@media screen and (max-width: 1150px) {
+    .app__menu-categories {
+        
+    }
+}

@@ -1,0 +1,31 @@
+.app__footer {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.app__footer-links {
+    width: 94%;
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid rgb(204, 188, 100);
+    padding: 1rem 0 0;
+}
+
+.app__footer-links li {
+    list-style: none;
+    margin: 0 2rem;
+    cursor: pointer;
+}
+
+.app__footer-links li:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(204, 188, 100);
+}
+
+.app__footer-a {
+    display: flex;
+    align-items: end;
+    border-top: 2px solid rgb(204, 188, 100);
+    /* padding: 1rem 0 0; */
+}
