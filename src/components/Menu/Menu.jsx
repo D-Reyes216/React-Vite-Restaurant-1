@@ -1,24 +1,50 @@
-import React from 'react'
-import MenuList from './MenuList'
+import React, { Component } from 'react'
+import constants  from '../../assets/constants.js';
+
 import './Menu.css'
 
-const Menu = () => {
-  let listNum = 2;
-  return (
-    <div className="app__menu">
-        <ul className="app__menu-categories">
-            <li id='menu-1' onClick={() => {listNum = 0; console.log(listNum);}}>Breakfast</li>
-            <li id='menu-2' onClick={() => {listNum = 1; console.log(listNum);}}>Appetizers</li>
-            <li id='menu-3'>Lunch & Dinner</li>
-            <li id='menu-4'>Desserts</li>
-            <li id='menu-5'>Beverages</li>
-        </ul>
-        
-        <div className="app__menu-list">
-            <MenuList listNum = {listNum} />
-        </div>
-    </div>
-  )
+const menuList = [constants.breakfast, constants.appetizers, constants.lunchDinner, constants.desserts, constants.beverages];
+
+
+class Menu extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {currList: menuList[0]}
+  }
+
+  updateMenu(e) {
+    this.setState ({
+      currList: menuList[e] 
+    })
+  }
+  
+  render () {
+    return (
+      <div className="app__menu">
+          <ul className="app__menu-categories">
+              <li id='menu-1' onClick={() => { this.updateMenu(0);} }>Breakfast</li>
+              <li id='menu-2' onClick={() => { this.updateMenu(1);} }>Appetizers</li>
+              <li id='menu-3' onClick={() => { this.updateMenu(2);} }>Lunch & Dinner</li>
+              <li id='menu-4' onClick={() => { this.updateMenu(3);} }>Desserts</li>
+              <li id='menu-5' onClick={() => { this.updateMenu(4);} }>Beverages</li>
+          </ul>
+          
+      <div>
+        {this.state.currList.map((item, index) => {
+          return(
+            <div key={index} className="menuItem">
+              <div>{item.name}</div>
+              <div>{item.price}</div>
+            </div>
+          )
+        })}
+      </div>
+      
+      </div>
+      
+    )
+  }
 }
 
 export default Menu
