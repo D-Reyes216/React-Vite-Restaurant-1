@@ -1,0 +1,38 @@
+.app__gallery {
+    display: flex;
+    flex-direction: column;
+    column-count: 1;
+    /* margin: auto; */
+    border-top: 2px solid rgb(204, 188, 100);
+}
+
+.app__gallery-title {
+    margin: auto;
+    padding: 1rem 0 1rem;
+    font-size: 2.2rem;
+    font-style: italic;
+}
+
+.app__gallery-images {
+    display: flex;
+    flex-direction: column;
+}
+
+.app__gallery-image_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+
+    margin: 0 6em;
+}
+
+.app__gallery-image_block img {
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 50%;
+    border: 1px solid rgb(204, 188, 100);
+    margin: 1rem;
+}

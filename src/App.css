@@ -1,4 +1,19 @@
 body {
-  background-color: rgba(0, 0, 0, 0.9);
+  /* background-color: rgba(0, 0, 0, 0.9);
+  color: silver; */
+
+  margin: .5rem 6%;
+
+  /* width: 400px; height: 400px; */
+  background: radial-gradient(ellipse at center, rgb(0, 0, 0, 0.84) 47%, rgb(0, 0, 0, 0.85) 48%);
+  background-repeat: repeat;
+  background-size: 10px 10px;
+
   color: silver;
+
+  border-width: 0 5px;
+  border-left: rgb(204, 188, 100);
+  border-right: rgb(204, 188, 100);
 }
+
+
