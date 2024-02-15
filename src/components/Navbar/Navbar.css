@@ -1,10 +1,9 @@
 .app__navbar {
     top: auto;
-    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 2px solid rgb(204, 188, 100);
+    border: 2px solid var(--border-golden);
 }
 
 #logo-title {
@@ -32,11 +31,12 @@
 
 .app__navbar-links li {
     margin: 0 1rem;
+    font-size: 1.6rem;
 }
 
 .app__navbar-links li:hover {
     text-decoration: underline;
-    text-decoration-color: rgb(204, 188, 100);
+    text-decoration-color: var(--border-golden);
 }
 
 .app__navbar-dropdown {
@@ -47,9 +47,10 @@
     right: -6px;
     font-size: 120%;
     background-color: rgba(0, 0, 0, 0.75);
-    border: 2px solid rgb(204, 188, 100);
+    border: 2px solid var(--border-golden);
     border-radius: 50%;
     padding: 6px;
+    display: none;
 }
 
 .app__navbar-overlay {
@@ -62,14 +63,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* transition: .5s; */
     z-index: 5;
+    transition: .5s;
+
 }
 
 .app__navbar-overlay li {
+    display: flex;
+    justify-content: center;
     list-style: none;
     margin: 2.5rem;
-    color: rgb(204, 188, 100);
+    color: var(--border-golden);
     font-size: 1.5rem;
     cursor: pointer;
 
@@ -77,25 +81,21 @@
 
 .app__navbar-overlay li:hover {
     text-decoration: underline;
-    text-decoration-color: rgb(204, 188, 100);
+    text-decoration-color: var(--border-golden);
 }
 
 .app__navbar-overlay .overlay__close {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 20vw;
+    right: 20vw;
     font-size: 1.5rem;
-    color: rgb(204, 188, 100);
+    color: var(--border-golden);
     cursor: pointer;
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (min-width: 2300px) {
     .app__navbar-dropdown {
-        /* display: none; */
-    }
-
-    .app__navbar-links {
-        font-size: 1.25rem;
+        display: none;
     }
 }
 
@@ -105,21 +105,22 @@
     }
 
     .app__navbar-links {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .app__navbar-logo {
-        max-width: 10%;
+        max-width: 20%;
     }
 
     .app__navbar-title {
-        max-width: 75%;
+        max-width: 90%;
     }
 }
 
 @media screen and (max-width: 650px) {
     .app__navbar {
-        padding: 1rem
+        padding: 1rem;
+        justify-content: flex-end;
     }
 
     .app__navbar-links {
@@ -130,4 +131,11 @@
         display: block;
     }
 
+    .app__navbar-logo {
+        max-width: 10%;
+    }
+
+    .app__navbar-title {
+        max-width: 70%;
+    }
 }

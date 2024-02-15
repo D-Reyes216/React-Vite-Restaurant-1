@@ -1,0 +1,14 @@
+.app__contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.app__contact-info {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.app__contact-hours li{
+    list-style: none;
+}

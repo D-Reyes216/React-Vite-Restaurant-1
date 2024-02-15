@@ -27,8 +27,8 @@ class Menu extends Component {
 
   render () {
     return (
-      <div id='menu' className='app__menu'>
-        <div className='app__menu-title'>Menu</div>
+      <div className='app__menu app__section'>
+        <div className='section-heading'>Menu</div>
         <ul className='app__menu-categories'>
           {/* different menu categories that updates the list of menu items displayed when clicked */}
             <li className={ this.state.currCat == 0 ? 'active' : '' } onClick={() => { this.updateMenu(0);} }>Breakfast</li>

@@ -1,40 +1,30 @@
 .app__menu {
     display: flex;
     flex-direction: column;
-    border-top: 2px solid rgb(204, 188, 100);
-}
-
-.app__menu-title {
-    margin: auto;
-    padding-top: 1rem;
-    font-size: 2.2rem;
-    font-style: italic;
+    margin: 1rem 0;
 }
 
 .app__menu-categories {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 1rem;
     font-size: 1.25rem;
 }
 
 .app__menu-categories li{
     list-style: none;
-    margin: 0 1rem .2rem ;
+    margin: 0 1rem ;
     cursor: pointer;
 }
 
 .app__menu-categories li:hover {
     text-decoration: underline;
-    text-decoration-color: rgb(204, 188, 100);
+    text-decoration-color: var(--border-golden);
 }
-
-
 
 .app__menu-categories li.active {
     text-decoration: underline;
-    text-decoration-color: rgb(204, 188, 100);
+    text-decoration-color: var(--border-golden);
     font-weight: bold;
     color: rgb(204, 188, 100);
 }
@@ -42,7 +32,7 @@
 .app__menu-item {
     display: flex;
     justify-content: space-between;
-    margin: .5rem 10%;
+    margin: .5rem 10% 0;
 }
 
 @media screen and (max-width: 1150px) {

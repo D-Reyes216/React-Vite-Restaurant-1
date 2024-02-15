@@ -5,8 +5,8 @@ import './Gallery.css'
 
 const Gallery = () => {
   return (
-    <div className='app__gallery'>
-        <div className='app__gallery-title'>Gallery</div>
+    <div className='app__gallery app__section'>
+        <div className='section-heading'>Gallery</div>
         <div className='app__gallery-images'>
 
           <div className='app__gallery-image_block'>
