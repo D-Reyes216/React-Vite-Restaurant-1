@@ -9,18 +9,21 @@ const Contact = () => {
         <div className='app__contact-info'>
 
           <div>
-            Call us at: <br/><br/>
-            (123)-456-7890 
+            <div>Call us at:</div>
+            <ul>(123)-456-7890</ul> 
+            <div>E-mail us at: </div>
+            <ul>culinarycollection@cc.com</ul>
           </div>   
 
           <div className='app__contact-hours'>
-            Hours Open:
-            <li>
+            <div>Hours Open:</div>
               <ul>Sun-Thurs: 7:30 AM - 9:30 PM</ul>
               <ul>Fri-Sat: 7:30 AM - 11:00 PM</ul>
-            </li>
           </div>
-          
+          <div>
+            <div>Location: </div>
+            <ul>1234 Avenue Lane</ul>
+          </div>
         </div>
        
     </div>

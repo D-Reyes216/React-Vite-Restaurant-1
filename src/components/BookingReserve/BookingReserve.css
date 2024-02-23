@@ -3,18 +3,44 @@
     flex-direction: column;
 }
 
+.app__bookingReserve-body {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 6px;
+}
+
 .app__bookingReserve-reserve {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.app__bookingReserve-div {
+    margin: 6px;
+}
+
 .app__bookingReserve-reserve input{
     list-style: none;
 }
 
+.app__bookingReserve-success {
+    display: none;
+    color: var(--border-golden);
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.app__bookingReserve-success.active {
+    display: flex;
+    justify-content: center;
+}
+
 .rounded {
     border-radius: 6px;
+}
+
+.reserve-button {
+    font-size: 1.1rem;
 }
 
 .reserve-button:hover{
@@ -22,3 +48,13 @@
     background-color: var(--border-golden);
 }
 
+@media screen and (max-width: 650px) {
+    .app__bookingReserve-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .app__bookingReserve-inquiry {
+        padding: 1.2rem 0;
+    }
+}

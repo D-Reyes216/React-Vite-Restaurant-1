@@ -43,8 +43,8 @@
     margin: 1rem;
     cursor: pointer;
     position: fixed;
-    top: 65px;
-    right: -6px;
+    top: 4vw;
+    right: -2vw;
     font-size: 120%;
     background-color: rgba(0, 0, 0, 0.75);
     border: 2px solid var(--border-golden);
@@ -86,26 +86,20 @@
 
 .app__navbar-overlay .overlay__close {
     position: absolute;
-    top: 20vw;
-    right: 20vw;
+    top: 2vw;
+    right: 2vw;
     font-size: 1.5rem;
     color: var(--border-golden);
     cursor: pointer;
 }
 
-@media screen and (min-width: 2300px) {
-    .app__navbar-dropdown {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1050px) {
     .app__navbar-dropdown {
         display: none;
     }
 
-    .app__navbar-links {
-        font-size: 1rem;
+    .app__navbar-links li{
+        font-size: 1.4rem;
     }
 
     .app__navbar-logo {
@@ -113,7 +107,7 @@
     }
 
     .app__navbar-title {
-        max-width: 90%;
+        max-width: 70%;
     }
 }
 

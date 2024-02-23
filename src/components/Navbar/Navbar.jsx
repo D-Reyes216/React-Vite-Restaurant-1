@@ -38,11 +38,11 @@ const Navbar = () => {
             <GrClose className='overlay__close' onClick={() => setDropdown(false)}/>
 
             <ul>
-            <li onClick={(e) => {e.preventDefault(); scroll('.app__navbar')}} >Home</li>
-            <li onClick={(e) => {e.preventDefault(); scroll('.app__menu')}}>Menu</li>
-            <li onClick={(e) => {e.preventDefault(); scroll('.app__gallery')}}>Gallery</li>
-            <li onClick={(e) => {e.preventDefault(); scroll('.app__contact')}}>Contact</li>
-            <li onClick={(e) => {e.preventDefault(); scroll('.app__bookingReserve')}}>Booking & Reservations</li>
+            <li onClick={(e) => {e.preventDefault(); scroll('.app__navbar'); setDropdown(false)}} >Home</li>
+            <li onClick={(e) => {e.preventDefault(); scroll('.app__menu'); setDropdown(false)}}>Menu</li>
+            <li onClick={(e) => {e.preventDefault(); scroll('.app__gallery'); setDropdown(false)}}>Gallery</li>
+            <li onClick={(e) => {e.preventDefault(); scroll('.app__contact'); setDropdown(false)}}>Contact</li>
+            <li onClick={(e) => {e.preventDefault(); scroll('.app__bookingReserve'); setDropdown(false)}}>Booking & Reservations</li>
             </ul>
           </div>
           )}
